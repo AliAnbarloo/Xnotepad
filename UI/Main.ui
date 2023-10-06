@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1150</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../تصاویر/image.png</normaloff>../../../تصاویر/image.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>140</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>33</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>180</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color : gray;</string>
+    </property>
+    <property name="text">
+     <string>Text editing environment</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>130</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>27</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>notepad</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="New_File">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>240</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color:rgb(26, 95, 240);</string>
+    </property>
+    <property name="text">
+     <string>New file</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Open_File">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>280</y>
+      <width>151</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color:rgb(26, 95, 240);</string>
+    </property>
+    <property name="text">
+     <string>Open file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>320</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+color:rgb(26, 95, 240);</string>
+    </property>
+    <property name="text">
+     <string>Recent file :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>370</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>390</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>430</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>70</y>
+      <width>451</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Vemana2000</family>
+      <pointsize>300</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>140</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Vemana2000</family>
+      <pointsize>37</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="Recent_List">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>360</y>
+      <width>151</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>New_File</zorder>
+   <zorder>Open_File</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_3</zorder>
+   <zorder>Recent_List</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_File"/>
+    <addaction name="actionOpen_File"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPast"/>
+    <addaction name="actionSelect_all"/>
+   </widget>
+   <widget class="QMenu" name="menuplugin">
+    <property name="title">
+     <string>plugin</string>
+    </property>
+    <addaction name="actionAdd_neew_plugin"/>
+    <addaction name="actionPlugin_list"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHow_to_use"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuplugin"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_File">
+   <property name="text">
+    <string>New file</string>
+   </property>
+   <property name="statusTip">
+    <string>Create new file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>Open file</string>
+   </property>
+   <property name="statusTip">
+    <string>Open file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+   <property name="statusTip">
+    <string>Save file as</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="statusTip">
+    <string>Undo what you do</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo what you undo</string>
+   </property>
+   <property name="whatsThis">
+    <string>Redo what you undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="statusTip">
+    <string>Cut selected text</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy selected text</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPast">
+   <property name="text">
+    <string>Past</string>
+   </property>
+   <property name="statusTip">
+    <string>Past from your clipbord</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionSelect_all">
+   <property name="text">
+    <string>Select all</string>
+   </property>
+   <property name="statusTip">
+    <string>Select all text</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionAdd_neew_plugin">
+   <property name="text">
+    <string>Add new plugin</string>
+   </property>
+   <property name="statusTip">
+    <string>Add new plugin</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPlugin_list">
+   <property name="text">
+    <string>Plugin list</string>
+   </property>
+   <property name="statusTip">
+    <string>Show list of plugins</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionPlugins_settings">
+   <property name="text">
+    <string>Plugins settings</string>
+   </property>
+   <property name="statusTip">
+    <string>Plugins settings</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="actionDatabase">
+   <property name="text">
+    <string>Database</string>
+   </property>
+   <property name="statusTip">
+    <string>Show db setting</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionLight_mode">
+   <property name="text">
+    <string>Light mode</string>
+   </property>
+   <property name="statusTip">
+    <string>Change theme to light mode</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="actionDark_mode">
+   <property name="text">
+    <string>Dark mode</string>
+   </property>
+   <property name="statusTip">
+    <string>Change theme to dark mode</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="actionHow_to_use">
+   <property name="text">
+    <string>How to use</string>
+   </property>
+   <property name="statusTip">
+    <string>How to use Xnote</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionAll_shortcuts">
+   <property name="text">
+    <string>All shortcuts</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
