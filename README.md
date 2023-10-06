@@ -28,7 +28,7 @@ You can contribute to the development of this project. If you find a bug or prop
 This project is licensed under the MIT License.
 
 
-Created by : [Ali Anbarloo]( https://github.com/AliAnbarlo)
+Created by : [Ali Anbarloo]( https://github.com/AliAnbarloo)
 
 
 Written with the assistance of  [ChatGPT](https://Chat.OpenAi.com)
