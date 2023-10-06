@@ -27,7 +27,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../تصاویر/image.png</normaloff>../../../تصاویر/image.png</iconset>
+    <normaloff>../../../تصاویر/largetile.png</normaloff>../../../تصاویر/largetile.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(255, 255, 255);

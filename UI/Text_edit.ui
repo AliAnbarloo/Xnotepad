@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../تصاویر/largetile.png</normaloff>../../../تصاویر/largetile.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 0);</string>

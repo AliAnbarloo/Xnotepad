@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+Xnotepad.egg-info/PKG-INFO
+Xnotepad.egg-info/SOURCES.txt
+Xnotepad.egg-info/dependency_links.txt
+Xnotepad.egg-info/entry_points.txt
+Xnotepad.egg-info/requires.txt
+Xnotepad.egg-info/top_level.txt
