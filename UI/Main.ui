@@ -122,7 +122,7 @@ color:rgb(26, 95, 240);</string>
       <x>70</x>
       <y>280</y>
       <width>151</width>
-      <height>25</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -265,6 +265,7 @@ color:rgb(26, 95, 240);</string>
     </property>
     <addaction name="actionHow_to_use"/>
     <addaction name="actionAbout"/>
+    <addaction name="actionAll_Shortcuts"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuHelp"/>
@@ -473,6 +474,11 @@ color:rgb(26, 95, 240);</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionAll_Shortcuts">
+   <property name="text">
+    <string>All Shortcuts</string>
    </property>
   </action>
  </widget>

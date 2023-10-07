@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QAction
 from PyQt5 import uic
 from Open_File import OPENFILE
 from New_File import NEWFILE
+from New_C import NEW_C
+from New_Py import NEW_PY
 
 
 
@@ -23,11 +25,11 @@ class MyWindow(QMainWindow):
 
         self.M_UI = uic.loadUi('UI/Main.ui', self)
         self.M_UI.show()
-        self.New_File.clicked.connect(self.NewFile)
-        self.Open_File.clicked.connect(self.OpenFile)
+        self.New_File.clicked.connect(self.showCustomDialog)
+        self.Open_File.clicked.connect(self.showCustomDialog)
         self.actionAbout.triggered.connect(self.showAboutDialog)
         self.actionHow_to_use.triggered.connect(self.showHowToUseDialog)
-        self.actionNew_File.triggered.connect(self.NewFile)
+        self.actionNew_File.triggered.connect(self.showCustomDialog)
         self.actionOpen_File.triggered.connect(self.OpenFile)
 
     def OpenFile(self):
@@ -39,7 +41,7 @@ class MyWindow(QMainWindow):
         If a file is selected, it creates an instance of OPENFILE
         and displays the file content.
         """
-
+        
         Open_Module = OPENFILE()   
         Open_Module.show()
 
@@ -60,6 +62,28 @@ class MyWindow(QMainWindow):
     def showHowToUseDialog(self):
         how_to_use_dialog = uic.loadUi('UI/Dialog/How_To_Use.ui')
         how_to_use_dialog.exec_()
+
+    def showCustomDialog(self):
+        custom_dialog = uic.loadUi('UI/Dialog/Cho.ui')
+
+        # Connect buttons to empty functions
+        custom_dialog.Normal.clicked.connect(self.NewFile)
+        custom_dialog.Python.clicked.connect(self.pythonButtonClicked)
+        custom_dialog.C_Bu.clicked.connect(self.cBuButtonClicked)
+        custom_dialog.MarkDown.clicked.connect(self.NewFile)
+
+        custom_dialog.exec_()
+
+    # Empty functions for dialog buttons
+
+    def pythonButtonClicked(self):
+        New_Module_py = NEW_PY()   
+        New_Module_py.show()
+
+    def cBuButtonClicked(self):
+        New_Module_C = NEW_C()   
+        New_Module_C.show()
+
 
     def create_qapp():
         return QApplication([])
