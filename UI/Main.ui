@@ -298,12 +298,12 @@ color: rgb(94, 92, 100);</string>
      <string>V : 0.0.2</string>
     </property>
    </widget>
-   <widget class="QLabel" name="web">
+   <widget class="QPushButton" name="we">
     <property name="geometry">
      <rect>
-      <x>910</x>
+      <x>890</x>
       <y>0</y>
-      <width>171</width>
+      <width>201</width>
       <height>51</height>
      </rect>
     </property>
@@ -337,7 +337,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
    <zorder>listView</zorder>
    <zorder>label_4</zorder>
    <zorder>label_11</zorder>
-   <zorder>web</zorder>
+   <zorder>we</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">

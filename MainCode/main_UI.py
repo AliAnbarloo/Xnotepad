@@ -1,11 +1,16 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction , QMessageBox
-from PyQt5.QtGui import QStandardItem, QStandardItemModel
-from PyQt5 import uic
+
 from Open_File import OPENFILE
 from New_File import NEWFILE
 from New_C import NEW_C
 from New_Py import NEW_PY
+
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction , QMessageBox
+from PyQt5.QtGui import QStandardItem, QStandardItemModel
+from PyQt5 import uic
+from PyQt5.QtCore import QUrl
+from PyQt5.QtGui import QDesktopServices
+
 
 # Now
 
@@ -28,7 +33,7 @@ class MyWindow(QMainWindow):
         self.M_UI.show()
         self.New_File.clicked.connect(self.showCustomDialog)
         self.Open_File.clicked.connect(self.OpenFile)
-        self.web.clicked.connect(self.web)
+        self.we.clicked.connect(self.web)
         self.actionAbout.triggered.connect(self.showAboutDialog)
         self.actionHow_to_use.triggered.connect(self.showHowToUseDialog)
         self.actionNew_File.triggered.connect(self.showCustomDialog)
@@ -110,7 +115,7 @@ class MyWindow(QMainWindow):
         All_Short_dialog.exec_()
 
     def web(self):
-        web_page_url = QUrl('https://www.example.com')
+        web_page_url = QUrl('https://www.github.com')
         QDesktopServices.openUrl(web_page_url)
 
     def create_qapp():
