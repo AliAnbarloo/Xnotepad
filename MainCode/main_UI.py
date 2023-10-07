@@ -28,14 +28,14 @@ class MyWindow(QMainWindow):
         self.M_UI.show()
         self.New_File.clicked.connect(self.showCustomDialog)
         self.Open_File.clicked.connect(self.OpenFile)
+        self.web.clicked.connect(self.web)
         self.actionAbout.triggered.connect(self.showAboutDialog)
         self.actionHow_to_use.triggered.connect(self.showHowToUseDialog)
         self.actionNew_File.triggered.connect(self.showCustomDialog)
         self.actionOpen_File.triggered.connect(self.OpenFile)
+        self.actionAll_Shortcuts.triggered.connect(self.AllShort)
         self.recent_files_model = QStandardItemModel()
         self.M_UI.listView.setModel(self.recent_files_model)
-
-        # تنظیم کلیک بر روی فایل‌های اخیراً باز شده
         self.M_UI.listView.clicked.connect(self.openRecentFile)
 
     def OpenFile(self):
@@ -81,8 +81,6 @@ class MyWindow(QMainWindow):
 
     def showCustomDialog(self):
         custom_dialog = uic.loadUi('UI/Dialog/Cho.ui')
-
-        # Connect buttons to empty functions
         custom_dialog.Normal.clicked.connect(self.NewFile)
         custom_dialog.Python.clicked.connect(self.pythonButtonClicked)
         custom_dialog.C_Bu.clicked.connect(self.cBuButtonClicked)
@@ -101,22 +99,19 @@ class MyWindow(QMainWindow):
         New_Module_C.show()
 
     def show_popup(self):
-        # ایجاد یک شیء QMessageBox
         popup = QMessageBox()
-
-        # تنظیم پیام
         popup.setText('Coming Soon!')
-
-        # تنظیم نوع پیام (مثلاً Information)
         popup.setIcon(QMessageBox.Information)
-
-        # ایجاد یک دکمه برای بستن پاپ‌آپ
         popup.addButton(QMessageBox.Ok)
-
-        # نمایش پاپ‌آپ
         popup.exec_()
 
+    def AllShort(self):
+        All_Short_dialog = uic.loadUi('UI/Dialog/AllShort.ui')
+        All_Short_dialog.exec_()
 
+    def web(self):
+        web_page_url = QUrl('https://www.example.com')
+        QDesktopServices.openUrl(web_page_url)
 
     def create_qapp():
         return QApplication([])

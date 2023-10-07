@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>504</width>
     <height>613</height>
    </rect>
   </property>
@@ -38,10 +38,10 @@ background-color: rgb(0, 0, 0);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>270</y>
-     <width>281</width>
-     <height>61</height>
+     <x>10</x>
+     <y>80</y>
+     <width>431</width>
+     <height>381</height>
     </rect>
    </property>
    <property name="font">
@@ -50,7 +50,15 @@ background-color: rgb(0, 0, 0);</string>
     </font>
    </property>
    <property name="text">
-    <string>Just like normal Notepad</string>
+    <string>If you just want to write a
+normal textproceed as normal
+
+
+
+If you want to write code to
+execute, first save the project
+and then click F-5 
+(this item has not been tested for C /C++)</string>
    </property>
   </widget>
  </widget>

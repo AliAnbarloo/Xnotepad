@@ -1,6 +1,6 @@
 import sys , os
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog, QTextEdit, QVBoxLayout, QWidget, QPushButton
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog, QTextEdit, QVBoxLayout, QWidget, QPushButton , QUndoStack, QUndoCommand 
 
 class MyCommand(QUndoCommand):
     def __init__(self, text_edit, old_text, new_text):

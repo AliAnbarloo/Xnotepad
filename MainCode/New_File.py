@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog , QUndoStack, QUndoCommand 
 from PyQt5 import uic
 class MyCommand(QUndoCommand):
     def __init__(self, text_edit, old_text, new_text):
