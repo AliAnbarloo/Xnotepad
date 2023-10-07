@@ -1,7 +1,12 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog
 from PyQt5 import uic
-
+class MyCommand(QUndoCommand):
+    def __init__(self, text_edit, old_text, new_text):
+        super(MyCommand, self).__init__()
+        self.text_edit = text_edit
+        self.old_text = old_text
+        self.new_text = new_text
 class NEWFILE(QMainWindow):
     def __init__(self):
         super(NEWFILE, self).__init__()
@@ -70,8 +75,14 @@ class NEWFILE(QMainWindow):
     def showHowToUseDialog(self):
         how_to_use_dialog = uic.loadUi('UI/Dialog/How_To_Use.ui')
         how_to_use_dialog.exec_()
-
-
+    def keyPressEvent(self, event):
+        # ذخیره تغییرات در UndoStack به صورت خودکار هر زمان که یک کلید فشار داده شود
+        if event.modifiers() & Qt.ControlModifier and event.key() == Qt.Key_Z:
+            self.undo_stack.undo()
+        elif event.modifiers() & QApplication.ControlModifier and event.key() == Qt.Key_Y:
+            self.undo_stack.redo()
+        else:
+            super(NEW_PY, self).keyPressEvent(event)
 
 if __name__ == '__main__':
     window = NEWFILE()

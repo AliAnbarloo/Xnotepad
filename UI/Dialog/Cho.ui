@@ -142,9 +142,9 @@ text-align: center;
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 30px;
-border: 3px solid rgb(28, 113, 216);
+border: 3px solid rgb(154, 153, 150);
 text-align: center;
-</string>
+color: rgb(154, 153, 150);</string>
    </property>
    <property name="text">
     <string>MarkDown</string>

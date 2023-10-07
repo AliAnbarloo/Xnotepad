@@ -2,6 +2,12 @@ import sys , os
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog, QTextEdit, QVBoxLayout, QWidget, QPushButton
 
+class MyCommand(QUndoCommand):
+    def __init__(self, text_edit, old_text, new_text):
+        super(MyCommand, self).__init__()
+        self.text_edit = text_edit
+        self.old_text = old_text
+        self.new_text = new_text
 class NEW_C(QMainWindow):
     def __init__(self):
         super(NEW_C, self).__init__()
@@ -76,6 +82,14 @@ class NEW_C(QMainWindow):
         else:
             self.saveFileAs()
             os.system(cm2)
+    def keyPressEvent(self, event):
+        # ذخیره تغییرات در UndoStack به صورت خودکار هر زمان که یک کلید فشار داده شود
+        if event.modifiers() & Qt.ControlModifier and event.key() == Qt.Key_Z:
+            self.undo_stack.undo()
+        elif event.modifiers() & QApplication.ControlModifier and event.key() == Qt.Key_Y:
+            self.undo_stack.redo()
+        else:
+            super(NEW_PY, self).keyPressEvent(event)
 
 if __name__ == '__main__':
     os.system("clear")

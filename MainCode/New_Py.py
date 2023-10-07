@@ -1,7 +1,19 @@
 import sys , os
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog, QTextEdit, QVBoxLayout, QWidget, QPushButton
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QFileDialog, QTextEdit, QVBoxLayout, QWidget, QPushButton ,  QUndoStack, QUndoCommand 
 
+class MyCommand(QUndoCommand):
+    def __init__(self, text_edit, old_text, new_text):
+        super(MyCommand, self).__init__()
+        self.text_edit = text_edit
+        self.old_text = old_text
+        self.new_text = new_text
+
+    def redo(self):
+        self.text_edit.setPlainText(self.new_text)
+
+    def undo(self):
+        self.text_edit.setPlainText(self.old_text)
 class NEW_PY(QMainWindow):
     def __init__(self):
         super(NEW_PY, self).__init__()
@@ -44,6 +56,7 @@ class NEW_PY(QMainWindow):
                 file_content = file.read()
                 self.textEdit.setPlainText(file_content)
                 self.file_path = file_path  # تنظیم مسیر فایل
+                self.addFileToRecentList(file_path)
         except Exception as e:
             print(f"Error loading file: {e}")
 
@@ -74,6 +87,14 @@ class NEW_PY(QMainWindow):
         else:
             self.saveFileAs()
             os.system(cm)
+    def keyPressEvent(self, event):
+        # ذخیره تغییرات در UndoStack به صورت خودکار هر زمان که یک کلید فشار داده شود
+        if event.modifiers() & Qt.ControlModifier and event.key() == Qt.Key_Z:
+            self.undo_stack.undo()
+        elif event.modifiers() & QApplication.ControlModifier and event.key() == Qt.Key_Y:
+            self.undo_stack.redo()
+        else:
+            super(NEW_PY, self).keyPressEvent(event)
 
 if __name__ == '__main__':
     os.system("clear")

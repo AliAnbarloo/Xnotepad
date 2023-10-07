@@ -1,12 +1,13 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QAction
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction , QMessageBox
+from PyQt5.QtGui import QStandardItem, QStandardItemModel
 from PyQt5 import uic
 from Open_File import OPENFILE
 from New_File import NEWFILE
 from New_C import NEW_C
 from New_Py import NEW_PY
 
-
+# Now
 
 class MyWindow(QMainWindow):
     def __init__(self):
@@ -26,11 +27,16 @@ class MyWindow(QMainWindow):
         self.M_UI = uic.loadUi('UI/Main.ui', self)
         self.M_UI.show()
         self.New_File.clicked.connect(self.showCustomDialog)
-        self.Open_File.clicked.connect(self.showCustomDialog)
+        self.Open_File.clicked.connect(self.OpenFile)
         self.actionAbout.triggered.connect(self.showAboutDialog)
         self.actionHow_to_use.triggered.connect(self.showHowToUseDialog)
         self.actionNew_File.triggered.connect(self.showCustomDialog)
         self.actionOpen_File.triggered.connect(self.OpenFile)
+        self.recent_files_model = QStandardItemModel()
+        self.M_UI.listView.setModel(self.recent_files_model)
+
+        # تنظیم کلیک بر روی فایل‌های اخیراً باز شده
+        self.M_UI.listView.clicked.connect(self.openRecentFile)
 
     def OpenFile(self):
 
@@ -44,6 +50,16 @@ class MyWindow(QMainWindow):
         
         Open_Module = OPENFILE()   
         Open_Module.show()
+
+    def addFileToRecentList(self, file_path):
+            item = QStandardItem(file_path)
+            self.recent_files_model.appendRow(item)
+
+    def openRecentFile(self, index):
+        selected_item = self.recent_files_model.itemFromIndex(index)
+        selected_file = selected_item.text()
+        self.loadFile(selected_file)
+
 
     def NewFile(self):
 
@@ -70,7 +86,7 @@ class MyWindow(QMainWindow):
         custom_dialog.Normal.clicked.connect(self.NewFile)
         custom_dialog.Python.clicked.connect(self.pythonButtonClicked)
         custom_dialog.C_Bu.clicked.connect(self.cBuButtonClicked)
-        custom_dialog.MarkDown.clicked.connect(self.NewFile)
+        custom_dialog.MarkDown.clicked.connect(self.show_popup)
 
         custom_dialog.exec_()
 
@@ -83,6 +99,23 @@ class MyWindow(QMainWindow):
     def cBuButtonClicked(self):
         New_Module_C = NEW_C()   
         New_Module_C.show()
+
+    def show_popup(self):
+        # ایجاد یک شیء QMessageBox
+        popup = QMessageBox()
+
+        # تنظیم پیام
+        popup.setText('Coming Soon!')
+
+        # تنظیم نوع پیام (مثلاً Information)
+        popup.setIcon(QMessageBox.Information)
+
+        # ایجاد یک دکمه برای بستن پاپ‌آپ
+        popup.addButton(QMessageBox.Ok)
+
+        # نمایش پاپ‌آپ
+        popup.exec_()
+
 
 
     def create_qapp():
