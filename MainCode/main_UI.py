@@ -115,7 +115,7 @@ class MyWindow(QMainWindow):
         All_Short_dialog.exec_()
 
     def web(self):
-        web_page_url = QUrl('https://www.github.com')
+        web_page_url = QUrl('https://www.github.com/AliAnbarloo/Xnotepad_web')
         QDesktopServices.openUrl(web_page_url)
 
     def create_qapp():
